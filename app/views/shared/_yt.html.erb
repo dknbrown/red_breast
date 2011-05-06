@@ -1,0 +1,8 @@
+<% unless @yt_items.empty? %>
+  <table class="yt" summary="youtube video test">
+    <%= render :partial => 'shared/yt_item', :collection => @yt_items %>
+    <tr><td>
+    <%= will_paginate @yt_items %>
+    </td></tr>
+  </table>
+  <% end %>

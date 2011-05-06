@@ -1,0 +1,9 @@
+<% unless @rssfeed_items.empty? %>
+  <table class="rssfeed" summary="rssfeed test">
+    <%= render :partial => 'shared/rssfeed_item', :collection => @rssfeed_items %>
+    <tr><td>
+    <%= will_paginate @yt_items %>
+    </td></tr>
+
+  </table>
+  <% end %>
