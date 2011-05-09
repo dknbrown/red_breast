@@ -1,7 +1,9 @@
 <tr>
   <td class="yt_thumbnail">
    <a href="<%= yt_item.player_url %>" target="_blank">
-      <img src="<%= yt_item.thumbnails.first.url %>" />
+      <img style="float:left;" src="<%= yt_item.thumbnail_url %>" />
     </a>
+    <p>author: <%= yt_item.author %> 
+       published date: <%= yt_item.published_at %></p>
   </td>
 </tr>

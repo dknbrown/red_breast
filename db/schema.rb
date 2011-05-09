@@ -10,6 +10,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110509165413) do
+
+  create_table "rss_feed_entries", :force => true do |t|
+    t.string   "url"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_feed_entries", :force => true do |t|
+    t.string   "profile_image_url"
+    t.string   "from_user"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "youtube_feed_entries", :force => true do |t|
+    t.string   "player_url"
+    t.string   "thumbnail_url"
+    t.datetime "updated_at"
+    t.string   "published_at"
+    t.string   "author"
+    t.text     "description"
+    t.string   "title"
+    t.string   "guid"
+    t.datetime "created_at"
+  end
 
 end

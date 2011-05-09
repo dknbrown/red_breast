@@ -6,21 +6,12 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     
-    client = YouTubeIt::Client.new()
+    @yt_items = YoutubeFeedEntry.all(:limit => 5, :order => "published_at desc")
 
-    reply = client.videos_by(:query => "warbler")
-    @yt_items = reply.videos.paginate(:page => params[:page], :per_page => 5)
+    @twitter_items = TwitterFeedEntry.all(:limit => 5, :order => "created_at desc")
 
-    search = Twitter::Search.new
-    @twitter_items = search.containing("warbler").per_page(4).fetch
-
-    source = "http://www.thewarblersnest.com/feed/" # url or local file
-    content = "" # raw content of rss feed will be loaded here
-    open(source) do |s| content = s.read end
-    rss = RSS::Parser.parse(content, false)
-    @rssfeed_items = rss.items.paginate(:page => params[:page], :per_page => 3)
-
-
+    @rssfeed_items = RssFeedEntry.all(:limit => 5)
+    
 
   end
 
