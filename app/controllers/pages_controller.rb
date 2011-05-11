@@ -6,11 +6,11 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     
-    @yt_items = YoutubeFeedEntry.all(:limit => 5, :order => "published_at desc")
+    @yt_items = YoutubeFeedEntry.all(:limit => 3, :order => "published_at desc")
 
-    @twitter_items = TwitterFeedEntry.all(:limit => 5, :order => "created_at desc")
+    @twitter_items = TwitterFeedEntry.all(:limit => 3, :order => "created_at desc")
 
-    @rssfeed_items = RssFeedEntry.all(:limit => 5)
+    @rssfeed_items = RssFeedEntry.all(:limit => 3)
     
 
   end

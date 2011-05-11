@@ -1,7 +1,5 @@
 <% unless @yt_items.empty? %>
-  <table class="yt" summary="youtube video test">
+  <ul class="feed" summary="youtube video test">
     <%= render :partial => 'shared/yt_item', :collection => @yt_items %>
-    <tr><td>
-        </td></tr>
-  </table>
+  </ul>
   <% end %>

@@ -1,8 +1,5 @@
 <% unless @rssfeed_items.empty? %>
-  <table class="rssfeed" summary="rssfeed test">
+  <ul class="feed" summary="rssfeed test">
     <%= render :partial => 'shared/rssfeed_item', :collection => @rssfeed_items %>
-    <tr><td>
-        </td></tr>
-
-  </table>
+  </ul>
   <% end %>

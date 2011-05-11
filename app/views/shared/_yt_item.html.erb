@@ -1,9 +1,8 @@
-<tr>
-  <td class="yt_thumbnail">
+
+  <li class="feed_item">
    <a href="<%= yt_item.player_url %>" target="_blank">
       <img style="float:left;" src="<%= yt_item.thumbnail_url %>" />
     </a>
-    <p>author: <%= yt_item.author %> 
-       published date: <%= yt_item.published_at %></p>
-  </td>
-</tr>
+    <h4><%= yt_item.title %></h4>
+  </li>
+
