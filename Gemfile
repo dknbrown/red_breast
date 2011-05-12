@@ -8,6 +8,8 @@ gem 'will_paginate', '3.0.pre2'
 gem 'youtube_it'
 gem 'twitter'
 gem 'whenever', :require => false
+gem 'nokogiri'
+gem 'yahoo_weatherman'
 
 group :development do
   gem 'rspec-rails', '2.5.0'

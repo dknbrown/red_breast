@@ -120,6 +120,8 @@ GEM
       aaronh-chronic (>= 0.3.9)
       activesupport (>= 2.3.4)
     will_paginate (3.0.pre2)
+    yahoo_weatherman (1.1.3)
+      nokogiri
     youtube_it (1.4.2)
       builder
       oauth (>= 0.4.4)
@@ -132,6 +134,7 @@ DEPENDENCIES
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
   gravatar_image_tag (= 1.0.0.pre2)
+  nokogiri
   rails (= 3.0.7)
   rspec (= 2.5.0)
   rspec-rails (= 2.5.0)
@@ -141,4 +144,5 @@ DEPENDENCIES
   webrat (= 0.7.1)
   whenever
   will_paginate (= 3.0.pre2)
+  yahoo_weatherman
   youtube_it

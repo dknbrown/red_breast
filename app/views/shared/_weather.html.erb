@@ -1,0 +1,9 @@
+<span class='wlocal'>
+<%= @weather_items.location['city'] %>,<%= @weather_items.location['country'] %>
+</span>
+<span class='wconditions'>
+<%= @weather_items.condition['text'] %> <%= @weather_items.condition['temp'] %>°C
+</span>
+<span class='wdate'>
+<%= @weather_items.condition['date'] %>
+</span>

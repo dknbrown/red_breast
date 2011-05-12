@@ -12,6 +12,11 @@ class PagesController < ApplicationController
 
     @rssfeed_items = RssFeedEntry.all(:limit => 1)
     
+    
+  client = Weatherman::Client.new
+  reply = client.lookup_by_woeid 862592
+  
+  @weather_items = reply
 
   end
 
@@ -22,5 +27,6 @@ class PagesController < ApplicationController
   def about
     @title = "About"
   end
+
 
 end
