@@ -90,18 +90,88 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* */
-.feed_col 
-{
-float:left;
-width:300px;
-height:600px;
+/* Project Red Breast */
+
+slogan {
+ float: right;
+}
+weather {
+ float: left;
+}
+.wrapper {
+width:750px;
+margin:0 auto;
+}
+.upper {
+clear: both;
+}
+.lower {
+clear: both;
+}
+.videos {
+float: left;
+width:350px;
+height:250px;
 margin:5px;
 border-style:solid;
 border-width:5px;
 }
- ul.feed {
+.pictures {
+float:left;
+width:350px;
+height:250px;
+margin:5px;
+border-style:solid;
+border-width:5px;
+}
+.words {
+float: left;
+width:350px;
+height:250px;
+margin:5px;
+border-style:solid;
+border-width:5px;
+}
+.sounds {
+float: left;
+width:350px;
+height:250px;
+margin:5px;
+border-style:solid;
+border-width:5px;
+}
+.arrows {
+width: 100%;
+clear: both;
+/* not sure how to sit this on the bottom */
+bottom: 0px;
+}
+.left_arrow {
+float: left;
+font-size: 200%;
 
+}
+.right_arrow {
+float: right;
+font-size: 200%;
+
+}
+
+ .yt_item {
+text-align: center;
+}
+
+.warbler_twit {
+float: right;
+width: 35%;
+height: 60%;
+margin:5px;
+border-style:solid;
+border-width:2px;
+
+}
+ul.feed {
+font-size: 70%;
 }
 
 .feed li {
@@ -109,6 +179,13 @@ border-width:5px;
 padding: 15px;
 }
 
-.feed_item h4 {
-  font-size: 100%;
+.sound_item {
+border-style:solid;
+border-width:2px;
+width:90%;
+height: 35%;
+margin: 15px;
+border-style:solid;
+border-width:2px;
+
 }

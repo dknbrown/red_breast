@@ -1,11 +1,20 @@
-<h1>Red Breast</h1>
-<div class="feed_col">
-<%= render 'shared/yt' %>
-</div>
-<div class="feed_col">
-<%= render 'shared/twitter' %>
-</div>
-<div class="feed_col">
-<%= render 'shared/rssfeed' %>
+<h1>Project Red Breast</h1>
+<div class="wrapper">
+  <div class="upper">
+    <div class="videos">
+      <%= render 'shared/yt' %>
+    </div>
+    <div class="pictures">
+      pictures
+    </div>
+  </div>
 
+  <div class="lower">
+    <div class="words">
+      <%= render 'shared/twitter' %>
+    </div>
+    <div class="sounds">
+      <%= render 'shared/sound' %>
+    </div>
+  </div>
 </div>

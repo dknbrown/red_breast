@@ -1,5 +1,4 @@
 <% unless @yt_items.empty? %>
-  <ul class="feed" summary="youtube video test">
-    <%= render :partial => 'shared/yt_item', :collection => @yt_items %>
-  </ul>
-  <% end %>
+   <%= render :partial => 'shared/yt_item', :collection => @yt_items %>
+   <%= render 'shared/arrows' %> 
+<% end %>
