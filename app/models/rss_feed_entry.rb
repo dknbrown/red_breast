@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20110513180934
+#
+# Table name: rss_feed_entries
+#
+#  id           :integer         not null, primary key
+#  url          :string(255)
+#  title        :string(255)
+#  description  :string(255)
+#  published_at :datetime
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
 require 'rss/1.0'
 require 'rss/2.0'
 require 'open-uri'

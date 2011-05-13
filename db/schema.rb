@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509165413) do
+ActiveRecord::Schema.define(:version => 20110513180934) do
 
   create_table "rss_feed_entries", :force => true do |t|
     t.string   "url"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20110509165413) do
     t.string   "title"
     t.string   "guid"
     t.datetime "created_at"
+    t.string   "vid"
   end
 
 end

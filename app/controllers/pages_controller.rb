@@ -6,27 +6,21 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     
-    @yt_items = YoutubeFeedEntry.all(:limit => 1, :order => "published_at desc")
+    @yt_items = YoutubeFeedEntry.random
 
     @twitter_items = TwitterFeedEntry.all(:limit => 1, :order => "created_at desc")
 
     @rssfeed_items = RssFeedEntry.all(:limit => 1)
     
     
-  client = Weatherman::Client.new
-  reply = client.lookup_by_woeid 862592
-  
-  @weather_items = reply
+ 
+	@weather_items = get_weather(864342)
 
   end
 
-  def contact
-    @title = "Contact"
-  end
 
-  def about
-    @title = "About"
-  end
-
-
+	def get_weather (wocity)
+		client = Weatherman::Client.new :unit => "f"
+		eply = client.lookup_by_woeid wocity
+	end
 end

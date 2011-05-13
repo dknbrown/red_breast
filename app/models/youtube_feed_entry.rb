@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110509024351
+# Schema version: 20110513180934
 #
 # Table name: youtube_feed_entries
 #
@@ -13,11 +13,12 @@
 #  title         :string(255)
 #  guid          :string(255)
 #  created_at    :datetime
+#  vid           :string(255)
 #
 
 class YoutubeFeedEntry < ActiveRecord::Base
 attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
-          :author, :description, :title
+          :author, :description, :title, :vid
 
   def self.update_entries(search_for)
     client = YouTubeIt::Client.new()
@@ -30,14 +31,18 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
       create!(
         :player_url => entry.player_url,
         :thumbnail_url => entry.thumbnails.first.url,
-        :updated_at => entry.updated_at,
         :published_at => entry.published_at,
         :author => entry.author.name,
         :description => entry.description, 
-        :title => entry.title
+        :title => entry.title,
+        :vid => entry.video_id.split(':')[-1]
+        
       )
       end
     end
   end
 
+  def self.random()
+	self.find(:first, :offset => rand(self.all.size-1))	
+  end
 end

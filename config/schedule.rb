@@ -8,8 +8,8 @@
 # set :output, "/path/to/my/cron_log.log"
 #
  every 2.hours do
-   runner "YoutubeFeedEntry.update_entries('rumors')"
-   runner "TwitterFeedEntry.update_entries('rumors')"
+   runner "YoutubeFeedEntry.update_entries('viking')"
+   runner "TwitterFeedEntry.update_entries('viking')"
    runner "RssFeedEntry.update_entries('http://www.thewarblersnest.com/feed/')"
 
   
