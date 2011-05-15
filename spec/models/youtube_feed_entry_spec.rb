@@ -16,4 +16,8 @@ describe YoutubeFeedEntry do
   it "should create a new instance given valid attributes" do
     YoutubeFeedEntry.create!(@attr)
   end  
+  
+  it "should respond to random" do 
+	YoutubeFeedEntry.should respond_to(:random)
+  end
 end

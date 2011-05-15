@@ -3,23 +3,29 @@ require 'rss/2.0'
 require 'open-uri'
 
 class PagesController < ApplicationController
+  
+  
   def home
     @title = "Home"
     
-    @yt_items = YoutubeFeedEntry.random
-
     @twitter_items = TwitterFeedEntry.all(:limit => 1, :order => "created_at desc")
 
     @rssfeed_items = RssFeedEntry.all(:limit => 1)
     
-    
+    @yt_items = YoutubeFeedEntry.random
  
-	@weather_items = get_weather(864342)
+	@weather_items = update_weather(864342)
+
+	@keywords = SubjectKeyword.all_by_ep(1)
+	@keyword = @keywords[0]
+	@count = 0
 
   end
+  
 
 
-	def get_weather (wocity)
+
+	def update_weather (wocity)
 		client = Weatherman::Client.new :unit => "f"
 		eply = client.lookup_by_woeid wocity
 	end

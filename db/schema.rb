@@ -10,13 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110513180934) do
+ActiveRecord::Schema.define(:version => 20110515041042) do
 
   create_table "rss_feed_entries", :force => true do |t|
     t.string   "url"
     t.string   "title"
     t.string   "description"
     t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subject_keywords", :force => true do |t|
+    t.string   "keyword"
+    t.integer  "ep"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20110513180934) do
     t.string   "guid"
     t.datetime "created_at"
     t.string   "vid"
+    t.string   "tag"
   end
 
 end

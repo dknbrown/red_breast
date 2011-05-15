@@ -1,5 +1,17 @@
+
   <div class="arrows">
-  <a href="#" class="left_arrow"> <- </a>
-  <a href="#" class="right_arrow"> -> </a>
+  <%= form_for('page_keyword', :remote => true) do |f| %>
+  <div class="left_arrow"><%= f.submit "<-" %></div>
+  <div class="right_arrow"><%= f.submit "->" %></div>
+  <% end %>
+  <span class="arrow_tag">
+		
+       <%= link_to @yt_items.tag, '/items', :id => "refresh-link", :remote => 'true' %>
+		
+		
+  </span>
+  
+
+        
   </div>
 

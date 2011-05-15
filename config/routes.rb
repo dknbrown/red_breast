@@ -5,6 +5,10 @@ RedBreast::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   
+  match '/items', 	:to => 'items#index'
+  
+  resource :youtube_feed_entry
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

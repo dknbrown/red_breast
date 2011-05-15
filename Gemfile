@@ -5,6 +5,7 @@ gem 'rails', '3.0.7'
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
+gem 'jquery-rails', '>= 0.2.6'
 gem 'youtube_it'
 gem 'twitter'
 gem 'whenever', :require => false
