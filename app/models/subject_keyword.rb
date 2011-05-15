@@ -15,7 +15,7 @@ class SubjectKeyword < ActiveRecord::Base
 
 		
 	def self.all_by_ep(ep_num)
-		keys = self.find(:all, :select => 'keyword', :conditions => { :ep => ep_num })
+		keys = self.find(:all, :conditions => { :ep => ep_num })
 		
 	end
 

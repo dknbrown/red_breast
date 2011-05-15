@@ -4,7 +4,7 @@ require 'open-uri'
 
 class PagesController < ApplicationController
   
-  
+  EPISODE = 1;
   def home
     @title = "Home"
     
@@ -16,8 +16,8 @@ class PagesController < ApplicationController
  
 	@weather_items = update_weather(864342)
 
-	@keywords = SubjectKeyword.all_by_ep(1)
-	@keyword = @keywords[0]
+	
+	@curkeyword = SubjectKeyword.where("keyword = ?" , @yt_items.tag ).first
 	@count = 0
 
   end

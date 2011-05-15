@@ -1,13 +1,14 @@
 <% unless @yt_items.nil? %>
 	<div class="yt_item">
 
-	<%= @yt_items.vid %> <%= @yt_items.title %><%= @yt_items.tag %>
+	<iframe height="200" src="http://www.youtube.com/embed/<%= @yt_items.vid %>" frameborder="0" allowfullscreen></iframe>
 	
 	
 	</div>
-    <%= render 'shared/arrows'%> 
-<% else %>
-hello:(
-    <%= render 'shared/arrows' %> 
+    
+
 <% end %>
 
+<%= render :partial => 'shared/arrows', :locals => { 
+		:kee => @curkeyword.keyword, 
+		:table_id => @curkeyword.id.to_s } %>

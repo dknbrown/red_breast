@@ -4,6 +4,7 @@ namespace :db do
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
 	make_keywords
+	make_yt_chache
   end
 end
 
@@ -30,8 +31,20 @@ end
 
 def make_yt_chache
 
-	SubjectKeyword.all.each do |kee|
-	YoutubeFeedEntry.update_entries('kee.keyword')
-	end
+	
+
+YoutubeFeedEntry.update_entries( "Viking")
+YoutubeFeedEntry.update_entries("Vikings")
+YoutubeFeedEntry.update_entries("Carl")
+YoutubeFeedEntry.update_entries("Sagan")
+YoutubeFeedEntry.update_entries("Carl Sagan")
+YoutubeFeedEntry.update_entries("Berserk")
+YoutubeFeedEntry.update_entries("Cosmos")
+YoutubeFeedEntry.update_entries("Plunder")
+YoutubeFeedEntry.update_entries("Pillage")
+YoutubeFeedEntry.update_entries("Norse")
+YoutubeFeedEntry.update_entries("Billions and billions")
+YoutubeFeedEntry.update_entries("Pale blue dot")
+YoutubeFeedEntry.update_entries("Leif Erickson")	
 
 end

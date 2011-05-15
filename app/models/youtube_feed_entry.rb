@@ -48,6 +48,6 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
   end
   
   def self.by_keyword(keyword)
-	self.find(:all, :conditions => { :tag => keyword })
+	self.find(:first, :conditions => { :tag => keyword })
   end
 end

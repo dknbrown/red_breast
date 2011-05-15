@@ -1,14 +1,16 @@
 
   <div class="arrows">
-  <%= form_for('page_keyword', :remote => true) do |f| %>
-  <div class="left_arrow"><%= f.submit "<-" %></div>
-  <div class="right_arrow"><%= f.submit "->" %></div>
-  <% end %>
+  
+  <div class="left_arrow">
+	<%= link_to "<-", '/items?table_id='+table_id+'&dir=-1', :id => "refresh-link", :remote => 'true' %>
+  </div>
+  <div class="right_arrow">
+	<%= link_to "->", '/items?table_id='+table_id+'&dir=1', :id => "refresh-link", :remote => 'true' %>
+  </div>
+  
   <span class="arrow_tag">
 		
-       <%= link_to @yt_items.tag, '/items', :id => "refresh-link", :remote => 'true' %>
-		
-		
+	<%= link_to kee, '/items?table_id='+table_id+'&dir=0', :id => "refresh-link", :remote => 'true' %>
   </span>
   
 

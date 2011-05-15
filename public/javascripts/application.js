@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   
   $('#refresh-link').click(function(event){
-	alert("app js");
+	//alert("app js");
    // $.getScript('/items.js');
     event.preventDefault(); // Prevent link from following its href
   });
