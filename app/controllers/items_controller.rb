@@ -1,14 +1,14 @@
 class ItemsController < ApplicationController
 
 	def index
-	logger.debug "items index waka waka"
+	
 	
 	
 	
 		if (params[:dir] == "0") 
 			@yt_items = YoutubeFeedEntry.random
 			@curkeyword =  SubjectKeyword.where("keyword = ?", @yt_items.tag).first
-			logger.debug @curkeyword.keyword
+			
 		end
 		
 		

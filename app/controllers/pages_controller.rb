@@ -4,7 +4,8 @@ require 'open-uri'
 
 class PagesController < ApplicationController
   
-  EPISODE = 1;
+  EPISODE = 1
+  WEATHER_WO_ID = 864342
   def home
     @title = "Home"
     
@@ -14,19 +15,16 @@ class PagesController < ApplicationController
     
     @yt_items = YoutubeFeedEntry.random
  
-	@weather_items = update_weather(864342)
+	@weather_items = update_weather( WEATHER_WO_ID )
 
-	
 	@curkeyword = SubjectKeyword.where("keyword = ?" , @yt_items.tag ).first
-	@count = 0
+	
 
   end
   
 
-
-
 	def update_weather (wocity)
 		client = Weatherman::Client.new :unit => "f"
-		eply = client.lookup_by_woeid wocity
+		client.lookup_by_woeid wocity
 	end
 end

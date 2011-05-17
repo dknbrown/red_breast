@@ -24,7 +24,7 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
   def self.update_entries(search_for)
     client = YouTubeIt::Client.new()
 
-    reply = client.videos_by(:query => search_for)
+    reply = client.videos_by(:query => search_for, :page => 1, :per_page => 5)
     entries = reply.videos
 
     entries.each do |entry|
@@ -48,6 +48,8 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
   end
   
   def self.by_keyword(keyword)
-	self.find(:first, :conditions => { :tag => keyword })
+	r = self.where("tag = ?" , keyword)
+	#get random from smaller selection
+	r.find(:first, :offset => r(rand.all.size-1))	
   end
 end

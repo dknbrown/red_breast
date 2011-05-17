@@ -1,8 +1,11 @@
 
-<span class='wlocal'>
-<%= @weather_items.location['city'] %>
+<img id="wimage" class='wimage' src="images/low.png"/>
+<span id="wlocal" class='wlocal'>
+<%= @weather_items.location['city'] %>&nbsp;
 </span>
-<span class='wconditions'>
-<%= @weather_items.condition['temp'] %> °F
+<span id="wconditions" class='wconditions'>
+<%= @weather_items.condition['temp'] %>
 </span>
-
+<span class="wdeg">
+ °F 
+ </span>
