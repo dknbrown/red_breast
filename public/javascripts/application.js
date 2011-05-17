@@ -12,14 +12,12 @@ $(document).ready(function() {
 	$('#slogan').text(arrSlogans[Math.floor(Math.random()*arrSlogans.length)]);
   
 	weather_val = $("#wconditions").text();
-	if ( weather_val < 10 ) {
-		$("#wimage").attr("src","images/low.png");
-	} else if ( weather_val < 30 ) {
-		$("#wimage").attr("src","images/lowmid.png");
+	if ( weather_val < 40 ) {
+		$("#wimage").attr("src","images/snow.png");
 	} else if ( weather_val < 60 ) {
-		$("#wimage").attr("src","images/highmid.png");
-	}else if ( weather_val >60 ) {
-		$("#wimage").attr("src","images/high.png");
+		$("#wimage").attr("src","images/rain.png");
+	} else if ( weather_val > 60 ) {
+		$("#wimage").attr("src","images/sun.png");
 	}
   
 	$('#refresh-link').click(function(event){
