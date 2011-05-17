@@ -50,6 +50,6 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
   def self.by_keyword(keyword)
 	r = self.where("tag = ?" , keyword)
 	#get random from smaller selection
-	r.find(:first, :offset => r(rand.all.size-1))	
+	r.find(:first, :offset => rand(r.all.size-1))	
   end
 end
