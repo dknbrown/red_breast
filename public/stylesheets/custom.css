@@ -363,6 +363,7 @@ font-size: 120%;
 .arrow_tag {
 /*text-align: center not working?*/
 text-align: center;
+font-size: 70%;
 margin:80px;
 }
  .yt_item {

@@ -24,7 +24,7 @@ belongs_to :subject_keyword
 		flickrcodes = YAML::load_file('flickrcodes.yml').to_hash
 		FlickRaw.api_key="#{flickrcodes['key']}"
 		FlickRaw.shared_secret="#{flickrcodes['secret']}"
-		list   = flickr.photos.getRecent( :text => search_for.keyword , :per_page => 5 )
+		list   = flickr.photos.search( :tags => search_for.keyword , :per_page => 5 )
 		
 		list.each do |photo| 
 			unless exists? :photo_id => photo.id
