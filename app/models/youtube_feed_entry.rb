@@ -1,20 +1,20 @@
 # == Schema Information
-# Schema version: 20110515015950
+# Schema version: 20110518205024
 #
 # Table name: youtube_feed_entries
 #
-#  id            :integer         not null, primary key
-#  player_url    :string(255)
-#  thumbnail_url :string(255)
-#  updated_at    :datetime
-#  published_at  :string(255)
-#  author        :string(255)
-#  description   :text
-#  title         :string(255)
-#  guid          :string(255)
-#  created_at    :datetime
-#  vid           :string(255)
-#  tag           :string(255)
+#  id                 :integer         not null, primary key
+#  player_url         :string(255)
+#  thumbnail_url      :string(255)
+#  updated_at         :datetime
+#  published_at       :string(255)
+#  author             :string(255)
+#  description        :text
+#  title              :string(255)
+#  guid               :string(255)
+#  created_at         :datetime
+#  vid                :string(255)
+#  subject_keyword_id :integer
 #
 
 class YoutubeFeedEntry < ActiveRecord::Base

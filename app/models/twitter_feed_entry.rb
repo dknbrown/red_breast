@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110509162526
+# Schema version: 20110518205024
 #
 # Table name: twitter_feed_entries
 #
@@ -9,6 +9,7 @@
 #  description       :string(255)
 #  created_at        :datetime
 #  updated_at        :datetime
+#  keyword_id        :integer
 #
 
 class TwitterFeedEntry < ActiveRecord::Base

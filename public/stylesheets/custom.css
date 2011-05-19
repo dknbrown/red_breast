@@ -44,18 +44,20 @@ footer nav {
 }
 /* Links */
 
-a {
-  color: #09c;
-  text-decoration: none;
+a:link {
+font-weight: bold;
+text-decoration: none;
+color: #A7A7A7;
 }
-
-a:hover {
-  color: #069;
-  text-decoration: underline;
-}
-
 a:visited {
-  color: #069;
+font-weight:bold;
+text-decoration: none;
+color: #A7A7A7;
+}
+a:hover, a:active {
+text-decoration: none;
+color: Black;
+background-color: #B0B0B0;
 }
 
 /* Navigation */
@@ -163,6 +165,7 @@ filter: alpha(opacity=86);
 border-width:1px;
 }
 .pictures {
+
 float:left;
 width:350px;
 height:250px;
@@ -201,6 +204,54 @@ opacity:0.86;
 filter: alpha(opacity=86);
 /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
 /*All filters must be placed together*/
+
+}
+.picwrapper{
+margin: 0 auto;
+margin-top: 25px;
+width: 200px;
+}
+.picupper{
+clear: both;
+}
+.piclower{
+clear: both;
+}
+.upleft{
+float: left;
+width:100px;
+height:100px;
+margin:0px;
+
+background-color:#ffffff;
+
+
+}
+.upright{
+float: left;
+width:100px;
+height:100px;
+margin:0px;
+
+background-color:#ffffff;
+
+}
+.lowleft{
+float: left;
+width:100px;
+height:100px;
+margin:0px;
+
+background-color:#ffffff;
+
+}
+.lowright{
+float: left;
+width:100px;
+height:100px;
+margin:0px;
+
+background-color:#ffffff;
 
 }
 .words {
@@ -295,12 +346,12 @@ bottom: 0px;
 }
 .left_arrow {
 float: left;
-font-size: 200%;
+font-size: 120%;
 
 }
 .right_arrow {
 float: right;
-font-size: 200%;
+font-size: 120%;
 
 }
 .arrow_tag {
