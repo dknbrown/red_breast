@@ -208,8 +208,8 @@ filter: alpha(opacity=86);
 }
 .picwrapper{
 margin: 0 auto;
-margin-top: 25px;
-width: 200px;
+margin-top: 5px;
+width: 300px;
 }
 .picupper{
 clear: both;
@@ -217,20 +217,26 @@ clear: both;
 .piclower{
 clear: both;
 }
-.upleft{
+.picinner{
 float: left;
-width:100px;
-height:100px;
+width:75px;
+height:75px;
 margin:0px;
 
 background-color:#ffffff;
+}
+.upleft{
+float: left;
+width:75px;
+height:75px;
+margin:0px;
 
-
+background-color:#ffffff;
 }
 .upright{
 float: left;
-width:100px;
-height:100px;
+width:75px;
+height:75px;
 margin:0px;
 
 background-color:#ffffff;
@@ -238,8 +244,8 @@ background-color:#ffffff;
 }
 .lowleft{
 float: left;
-width:100px;
-height:100px;
+width:75px;
+height:75px;
 margin:0px;
 
 background-color:#ffffff;
@@ -247,8 +253,8 @@ background-color:#ffffff;
 }
 .lowright{
 float: left;
-width:100px;
-height:100px;
+width:75px;
+height:75px;
 margin:0px;
 
 background-color:#ffffff;

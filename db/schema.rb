@@ -10,15 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518205024) do
+ActiveRecord::Schema.define(:version => 20110519202941) do
 
   create_table "flickr_feeds", :force => true do |t|
     t.string   "title"
     t.string   "url_square"
     t.string   "url_med"
-    t.string   "tag"
+    t.string   "keyword"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "subject_keyword_id"
+    t.integer  "photo_id"
+    t.string   "page_url"
   end
 
   create_table "rss_feed_entries", :force => true do |t|

@@ -5,6 +5,7 @@ namespace :db do
     Rake::Task['db:reset'].invoke
 	make_keywords
 	make_yt_chache
+	make_flickr_chache
   end
 end
 
@@ -31,8 +32,16 @@ end
 
 def make_yt_chache
 
-	SubjectKeyword.all_by_ep(1) do |sk|
+	SubjectKeyword.all_by_ep(1).each do |sk|
 		YoutubeFeedEntry.update_entries( sk.id )
+	end
+	
+end
+
+def make_flickr_chache
+
+	SubjectKeyword.all_by_ep(1).each do |sk|
+		FlickrFeed.update_entries( sk.id )
 	end
 	
 end
