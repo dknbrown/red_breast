@@ -11,6 +11,7 @@ gem 'twitter'
 gem 'whenever', :require => false
 gem 'nokogiri'
 gem 'yahoo_weatherman'
+gem 'flickr-fu'
 
 group :development do
   gem 'rspec-rails', '2.5.0'

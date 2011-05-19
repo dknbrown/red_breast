@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
 	
 		if (params[:dir] == "0") 
 			@yt_items = YoutubeFeedEntry.random
-			@curkeyword =  SubjectKeyword.where("keyword = ?", @yt_items.tag).first
+			@curkeyword =  @yt_items.subject_keyword
 			
 		end
 		
@@ -15,10 +15,11 @@ class ItemsController < ApplicationController
 		if (params[:dir] == "-1") 
 			if (params[:table_id].to_i > 1)
 				@curkeyword =  SubjectKeyword.find(params[:table_id].to_i-1)
-				@yt_items = YoutubeFeedEntry.by_keyword(@curkeyword.keyword)
+				@yt_items = YoutubeFeedEntry.randomizeSet(@curkeyword.youtube_feed_entries)
+				
 			else
 				@curkeyword =  SubjectKeyword.last
-				@yt_items = YoutubeFeedEntry.by_keyword(@curkeyword.keyword)
+				@yt_items = YoutubeFeedEntry.randomizeSet(@curkeyword.youtube_feed_entries)
 			end
 				
 		end
@@ -26,10 +27,10 @@ class ItemsController < ApplicationController
 		if (params[:dir] == "1") 
 			if (params[:table_id].to_i < SubjectKeyword.count)
 				@curkeyword =  SubjectKeyword.find(params[:table_id].to_i+1)
-				@yt_items = YoutubeFeedEntry.by_keyword(@curkeyword.keyword)
+				@yt_items = YoutubeFeedEntry.randomizeSet(@curkeyword.youtube_feed_entries)
 			else
 				@curkeyword =  SubjectKeyword.first
-				@yt_items = YoutubeFeedEntry.by_keyword(@curkeyword.keyword)
+				@yt_items = YoutubeFeedEntry.randomizeSet(@curkeyword.youtube_feed_entries)
 			end
 		end
 		

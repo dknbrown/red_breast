@@ -19,12 +19,13 @@
 
 class YoutubeFeedEntry < ActiveRecord::Base
 attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
-          :author, :description, :title, :vid, :tag
+          :author, :description, :title, :vid, :tag, :subject_keyword_id
+belongs_to :subject_keyword
 
-  def self.update_entries(search_for)
+  def self.update_entries(search_for_id)
     client = YouTubeIt::Client.new()
-
-    reply = client.videos_by(:query => search_for, :page => 1, :per_page => 5)
+	search_for = SubjectKeyword.find(search_for_id)
+    reply = client.videos_by(:query => search_for.keyword, :page => 1, :per_page => 5)
     entries = reply.videos
 
     entries.each do |entry|
@@ -36,8 +37,9 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
         :author => entry.author.name,
         :description => entry.description, 
         :title => entry.title,
-        :vid => entry.video_id.split(':')[-1],
-		:tag => search_for
+        :subject_keyword_id => search_for_id,
+        :vid => entry.video_id.split(':')[-1]
+		
       )
       end
     end
@@ -47,9 +49,9 @@ attr_accessible :player_url, :thumbnail_url, :updated_at, :published_at,
 	self.find(:first, :offset => rand(self.all.size-1))	
   end
   
-  def self.by_keyword(keyword)
-	r = self.where("tag = ?" , keyword)
+  def self.randomizeSet(items)
+	
 	#get random from smaller selection
-	r.find(:first, :offset => rand(r.all.size-1))	
+	return items.find(:first, :offset => rand(items.all.size-1))	
   end
 end

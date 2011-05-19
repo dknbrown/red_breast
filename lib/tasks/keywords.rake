@@ -31,20 +31,8 @@ end
 
 def make_yt_chache
 
+	SubjectKeyword.all_by_ep(1) do |sk|
+		YoutubeFeedEntry.update_entries( sk.id )
+	end
 	
-
-YoutubeFeedEntry.update_entries( "Viking")
-YoutubeFeedEntry.update_entries("Vikings")
-YoutubeFeedEntry.update_entries("Carl")
-YoutubeFeedEntry.update_entries("Sagan")
-YoutubeFeedEntry.update_entries("Carl Sagan")
-YoutubeFeedEntry.update_entries("Berserk")
-YoutubeFeedEntry.update_entries("Cosmos")
-YoutubeFeedEntry.update_entries("Plunder")
-YoutubeFeedEntry.update_entries("Pillage")
-YoutubeFeedEntry.update_entries("Norse")
-YoutubeFeedEntry.update_entries("Billions and billions")
-YoutubeFeedEntry.update_entries("Pale blue dot")
-YoutubeFeedEntry.update_entries("Leif Erickson")	
-
 end

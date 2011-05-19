@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110515041042) do
+ActiveRecord::Schema.define(:version => 20110518205024) do
+
+  create_table "flickr_feeds", :force => true do |t|
+    t.string   "title"
+    t.string   "url_square"
+    t.string   "url_med"
+    t.string   "tag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rss_feed_entries", :force => true do |t|
     t.string   "url"
@@ -34,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110515041042) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "keyword_id"
   end
 
   create_table "youtube_feed_entries", :force => true do |t|
@@ -47,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20110515041042) do
     t.string   "guid"
     t.datetime "created_at"
     t.string   "vid"
-    t.string   "tag"
+    t.integer  "subject_keyword_id"
   end
 
 end

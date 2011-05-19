@@ -17,7 +17,7 @@ class PagesController < ApplicationController
  
 	@weather_items = update_weather( WEATHER_WO_ID )
 
-	@curkeyword = SubjectKeyword.where("keyword = ?" , @yt_items.tag ).first
+	@curkeyword = SubjectKeyword.where("id = ?" , @yt_items.subject_keyword ).first
 	
 
   end
