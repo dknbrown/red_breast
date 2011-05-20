@@ -59,7 +59,10 @@ text-decoration: none;
 color: Black;
 background-color: #B0B0B0;
 }
-
+a.image-border {
+	text-decoration: none;
+	border: 0 none;
+	}
 /* Navigation */
 
 nav {
