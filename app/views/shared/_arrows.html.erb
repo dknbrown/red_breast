@@ -2,18 +2,18 @@
   <div class="arrows">
   
   <div class="left_arrow">
-	<%= link_to "« Prev", '/items?table_id='+table_id+'&dir=-1', :id => "refresh-link", :remote => 'true' %>
-  </div>
-  <div class="right_arrow">
-	<%= link_to "Next →", '/items?table_id='+table_id+'&dir=1', :id => "refresh-link", :remote => 'true' %>
+	<%= link_to "« Prev", '/items/yt?table_id='+table_id+'&dir=-1', :id => "refresh-link", :remote => 'true' %>
   </div>
   
-  <span class="arrow_tag">
+   <span class="arrow_tag">
 		
-	<%= link_to kee, '/items?table_id='+table_id+'&dir=0', :id => "refresh-link", :remote => 'true' %>
+	<%= link_to kee, '/items/yt?table_id='+table_id+'&dir=0', :id => "refresh-link", :remote => 'true' %>
   </span>
   
-
+  <div class="right_arrow">
+	<%= link_to "Next →", '/items/yt?table_id='+table_id+'&dir=1', :id => "refresh-link", :remote => 'true' %>
+  </div>
+  
         
   </div>
 

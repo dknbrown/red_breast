@@ -350,24 +350,25 @@ filter: alpha(opacity=86);
 .arrows {
 width: 100%;
 clear: both;
+text-align: center;
 /* not sure how to sit this on the bottom */
 bottom: 0px;
 }
 .left_arrow {
 float: left;
-font-size: 120%;
+font-size: 70%;
 
 }
 .right_arrow {
 float: right;
-font-size: 120%;
+font-size: 70%;
 
 }
 .arrow_tag {
-/*text-align: center not working?*/
-text-align: center;
+
+margin-left: auto;
+margin-right: auto;
 font-size: 70%;
-margin:80px;
 }
  .yt_item {
 text-align: center;

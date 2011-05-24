@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110519202941
+# Schema version: 20110524191807
 #
 # Table name: flickr_feeds
 #
@@ -11,13 +11,13 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #  subject_keyword_id :integer
-#  photo_id           :integer
+#  photo_id           :string(255)
 #  page_url           :string(255)
 #
 
 class FlickrFeed < ActiveRecord::Base
 attr_accessible :title, :keyword, :url_square, :url_med, :subject_keyword_id, :photo_id, :page_url
-#belongs_to :subject_keyword
+belongs_to :subject_keyword
 
 	def self.update_entries(search_for_id)
 		search_for = SubjectKeyword.find(search_for_id)

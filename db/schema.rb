@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110519202941) do
+ActiveRecord::Schema.define(:version => 20110524191807) do
 
   create_table "flickr_feeds", :force => true do |t|
     t.string   "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110519202941) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "subject_keyword_id"
-    t.integer  "photo_id"
+    t.string   "photo_id"
     t.string   "page_url"
   end
 
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20110519202941) do
     t.string   "title"
     t.string   "description"
     t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "soundcloud_feed_entries", :force => true do |t|
+    t.string   "title"
+    t.string   "sound_id"
+    t.integer  "subject_keyword_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

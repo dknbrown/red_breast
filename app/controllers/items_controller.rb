@@ -1,10 +1,7 @@
 class ItemsController < ApplicationController
 
-	def index
-	
-	
-	
-	
+	def yt
+
 		if (params[:dir] == "0") 
 			@yt_items = YoutubeFeedEntry.random
 			@curkeyword =  @yt_items.subject_keyword
@@ -33,6 +30,22 @@ class ItemsController < ApplicationController
 				@yt_items = YoutubeFeedEntry.randomizeSet(@curkeyword.youtube_feed_entries)
 			end
 		end
+		
+		respond_to do |wants|
+			wants.html
+			wants.js
+		end
+	end
+	
+	def fl
+		
+		respond_to do |wants|
+			wants.html
+			wants.js
+		end
+	end
+	
+	def sc
 		
 		respond_to do |wants|
 			wants.html

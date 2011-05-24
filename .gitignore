@@ -2,5 +2,5 @@
 db/*.sqlite3
 log/*.log
 tmp/
-flickr*.yml
+*codes.yml
 .swp

@@ -1,7 +1,9 @@
 <div class="picwrapper">
 <% randomflickr; unless @rf.nil? %>
+
 <div class="picupper">
 	<div class="picinner">
+		
 		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
       <img src="<%= @rf.url_square %>" alt="flickr" /></a>
     </div>
@@ -60,5 +62,6 @@
     </div>
     
 </div>
+<%= link_to "« ", '/items/fl', :id => "refresh-link", :class => "right_arrow", :remote => 'true' %>
 <% end %>
 </div>

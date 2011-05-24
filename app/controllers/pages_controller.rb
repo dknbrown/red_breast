@@ -11,13 +11,14 @@ class PagesController < ApplicationController
     
     @twitter_items = TwitterFeedEntry.all(:limit => 1, :order => "created_at desc")
 
-    @rssfeed_items = RssFeedEntry.all(:limit => 1)
+    #@rssfeed_items = RssFeedEntry.all(:limit => 1)
     
     @yt_items = YoutubeFeedEntry.random
- 
-	@weather_items = update_weather( WEATHER_WO_ID )
+    
+    @weather_items = update_weather( WEATHER_WO_ID )
 
 	@curkeyword = SubjectKeyword.where("id = ?" , @yt_items.subject_keyword ).first
+	
 	
 
   end

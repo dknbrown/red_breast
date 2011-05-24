@@ -6,6 +6,7 @@ namespace :db do
 	make_keywords
 	make_yt_chache
 	make_flickr_chache
+	make_soundcloud_chache
   end
 end
 
@@ -31,7 +32,7 @@ SubjectKeyword.create!(:keyword => "Leif Erickson" , :ep => 1)
 end
 
 def make_yt_chache
-
+	p "start youtube"
 	SubjectKeyword.all_by_ep(1).each do |sk|
 		YoutubeFeedEntry.update_entries( sk.id )
 	end
@@ -39,9 +40,17 @@ def make_yt_chache
 end
 
 def make_flickr_chache
-
+	p "start flickr"
 	SubjectKeyword.all_by_ep(1).each do |sk|
 		FlickrFeed.update_entries( sk.id )
+	end
+	
+end
+
+def make_soundcloud_chache
+	p "start soundcloud"
+	SubjectKeyword.all_by_ep(1).each do |sk|
+		SoundcloudFeedEntry.update_entries( sk.id )
 	end
 	
 end

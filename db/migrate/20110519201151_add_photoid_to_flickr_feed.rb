@@ -1,6 +1,6 @@
 class AddPhotoidToFlickrFeed < ActiveRecord::Migration
   def self.up
-    add_column :flickr_feeds, :photo_id, :integer
+    add_column :flickr_feeds, :photo_id, :string
   end
 
   def self.down
