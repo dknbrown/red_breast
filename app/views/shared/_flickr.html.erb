@@ -1,4 +1,5 @@
 <div class="picwrapper">
+<% randomflickr; unless @rf.nil? %>
 <div class="picupper">
 	<div class="picinner">
 		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
@@ -40,6 +41,7 @@
 </div>
 
 <div class="piclower">
+	
     <div class="picinner">
 		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
       <img src="<%= @rf.url_square %>" alt="flickr" /></a>
@@ -58,5 +60,5 @@
     </div>
     
 </div>
-
+<% end %>
 </div>
