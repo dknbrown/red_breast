@@ -17,7 +17,7 @@
 
 class FlickrFeed < ActiveRecord::Base
 attr_accessible :title, :keyword, :url_square, :url_med, :subject_keyword_id, :photo_id, :page_url
-belongs_to :subject_keyword
+#belongs_to :subject_keyword
 
 	def self.update_entries(search_for_id)
 		search_for = SubjectKeyword.find(search_for_id)
