@@ -4,7 +4,7 @@
 
 body
 {
-  ;
+  
   background: url(../images/rich-bg-2.jpg);
   background-size: 100%;
 }
@@ -47,19 +47,21 @@ footer nav {
 a:link {
 font-weight: bold;
 text-decoration: none;
+
 color: #A7A7A7;
 }
 a:visited {
 font-weight:bold;
 text-decoration: none;
+
 color: #A7A7A7;
 }
 a:hover, a:active {
 text-decoration: none;
-color: Black;
-background-color: #B0B0B0;
+color: #9999ff;
+
 }
-a.image-border {
+a img {
 	text-decoration: none;
 	border: 0 none;
 	}
@@ -101,7 +103,10 @@ nav ul li a:hover {
 }
 
 /* Project Red Breast */
-
+round {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
 slogan {
  float: right;
 }
@@ -227,18 +232,17 @@ background-color:#ffffff;
 width: 100%;
 clear: both;
 text-align: center;
-/* not sure how to sit this on the bottom */
-bottom: 0px;
+margin-top: -10px;
 }
 .left_arrow {
 float: left;
-font-size: 70%;
-
+font-size: 120%;
+padding-left: 20px;
 }
 .right_arrow {
 float: right;
-font-size: 70%;
-
+font-size: 120%;
+padding-right: 20px;
 }
 .arrow_tag {
 

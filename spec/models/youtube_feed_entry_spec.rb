@@ -9,7 +9,8 @@ describe YoutubeFeedEntry do
       :published_at => 2.days.ago,
       :author => "Duder",
       :description => "Some description content",
-      :title => "Some title content"
+      :title => "Some title content",
+      :subject_keyword_id => 1
     }
   end
 
@@ -19,5 +20,9 @@ describe YoutubeFeedEntry do
   
   it "should respond to random" do 
 	YoutubeFeedEntry.should respond_to(:random)
+  end
+  
+  it "should respond to the subject_keyword relationship" do 
+	YoutubeFeedEntry.first.should respond_to(:subject_keyword)
   end
 end

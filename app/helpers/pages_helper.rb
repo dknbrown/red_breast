@@ -1,5 +1,6 @@
 module PagesHelper
 
+
 	def randomflickr
 		
 		@rf = FlickrFeed.random

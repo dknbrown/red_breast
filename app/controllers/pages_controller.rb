@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   EPISODE = 1
   WEATHER_WO_ID = 864342
   def home
-    @title = "Home"
+    @title = "Looking at stuff"
     
     @twitter_items = TwitterFeedEntry.all(:limit => 1, :order => "created_at desc")
 
@@ -17,8 +17,9 @@ class PagesController < ApplicationController
     
     @weather_items = update_weather( WEATHER_WO_ID )
 
-	@curkeyword = SubjectKeyword.where("id = ?" , @yt_items.subject_keyword ).first
-	
+	unless SubjectKeyword.nil?
+		@curkeyword = SubjectKeyword.where("id = ?" , @yt_items.subject_keyword ).first
+	end
 	
 
   end
