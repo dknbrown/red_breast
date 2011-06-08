@@ -4,15 +4,15 @@
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: '"Sagan" OR "Viking" OR "Berserk" OR "Norse"',
+  search: '<%= @tkw.html_safe %>',
   interval: 6000,
   title: 'Warbler',
-  subject: 'Sagan Vikings',
+  subject: 'Issue 1',
   width: 350,
   height: 160,
   theme: {
     shell: {
-      background: '#8ec1da',
+      background: 'none',
       color: '#ffffff'
     },
     tweets: {
@@ -22,14 +22,14 @@ new TWTR.Widget({
     }
   },
   features: {
-    scrollbar: false,
+    scrollbar: true,
     loop: true,
     live: true,
     hashtags: true,
     timestamp: true,
     avatars: true,
     toptweets: true,
-    behavior: 'default'
+    behavior: 'Default'
   }
 }).render().start();
 </script>
