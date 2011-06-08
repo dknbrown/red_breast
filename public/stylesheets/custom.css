@@ -16,7 +16,7 @@ header {
 }
 
 header img {
-  padding: 1em;
+  padding-right: 1em;
   
 }
 
@@ -30,6 +30,7 @@ section {
 
 section h1 {
   font-size: 200%;
+
 }
 
 footer {
@@ -109,12 +110,22 @@ round {
 }
 slogan {
  float: right;
+ background-color:#ffffff;
+ padding: 5px;
+}
+episode {
+ float: right;
+ margin-left:20px;
+ background-color:#ffffff;
+ padding: 5px;
 }
 weather {
  float: left;
+ padding: 5px;
 }
 .wimage {
- float: left;
+  float: left;
+  padding: 5px;
 }
 
 .wrapper {
@@ -133,7 +144,9 @@ width:350px;
 height:250px;
 margin:5px;
 
+}
 
+.redback {
 -background-color:#ffffff;
 border-width:2px;
 border-color:#090909;
@@ -167,8 +180,6 @@ opacity:0.86;
 filter: alpha(opacity=86);
 /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
 /*All filters must be placed together*/
-
-
 
 border-width:1px;
 }
@@ -279,16 +290,15 @@ padding: 15px;
 }
 
 .sound_item {
-border-style:solid;
-border-width:2px;
 width:90%;
-height: 35%;
 margin: 15px;
-border-style:solid;
-border-width:2px;
+border-style:none;
+}
+.caption {
+background-color:#ffffff;
+
 
 }
-
 /* weather */
 .wlocal{}
 .wconditions{}

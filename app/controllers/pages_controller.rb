@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   WEATHER_WO_ID = 864342
   def home
     @title = "Looking at stuff"
+    @episode = EPISODE
     
     
 

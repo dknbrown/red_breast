@@ -5,9 +5,9 @@
 $(document).ready(function() {
 	 
 	 var arrSlogans = new Array(
-	 "Changing The Way We Aggregate Stupid Data", 
-	 "From Dry Shrubby Fields to Wet Bottom-land Forests",
-	 "Changing The Way You Ignore Us Online");
+	 " Changing The Way We Aggregate Stupid Data ", 
+	 " From Dry Shrubby Fields to Wet Bottom-land Forests ",
+	 " Changing The Way You Ignore Us Online ");
 
 	$('#slogan').text(arrSlogans[Math.floor(Math.random()*arrSlogans.length)]);
   

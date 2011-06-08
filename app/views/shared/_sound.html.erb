@@ -11,7 +11,7 @@ value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.c
 	src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= @rsc.sound_id %>" 
 	type="application/x-shockwave-flash" width="100%"></embed> 
 </object> 
-
+<span class="caption"><%= @rsc.subject_keyword.keyword %></span>
 </div>
 <div class="sound_item">
 
@@ -25,8 +25,8 @@ value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.c
 	src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= randomsoundcloud; @rsc.sound_id %>" 
 	type="application/x-shockwave-flash" width="100%"></embed> 
 </object> 
-
+<span class="caption"><%= @rsc.subject_keyword.keyword %></span>
 <%= link_to "« ", '/items/sc', :id => "refresh-link", :class => "right_arrow", :remote => 'true' %>
 <% end %>
-</div>
 
+</div>

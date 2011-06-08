@@ -1,9 +1,8 @@
 module PagesHelper
-	EPISODE = 1
-
+	
 	def randomflickr
 		
-		@rf = FlickrFeed.imageGridArray(EPISODE)
+		@rf = FlickrFeed.imageGridArray(@episode)
 		
 	end
 	
