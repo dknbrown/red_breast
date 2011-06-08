@@ -1,67 +1,24 @@
 <div class="picwrapper">
 <% randomflickr; unless @rf.nil? %>
 
+
 <div class="picupper">
-	<div class="picinner">
-		
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-</div>
-
-<div class="piclower">
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    
-    
-</div>
-
-<div class="piclower">
 	
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
+<% (1..3).each do |rows| %>
+<div class="picupper">
+	<% (1..4).each do |cells| %>
+	<% i = cells+(4*(rows-1)) %>
+	<div class="picinner thumb">
+	<div class="alt"><%= @rf[i]["keyword"] %></div>
+		<a class="image-border" id="image-border" href="<%= @rf[i]["page_url"] %>" target="_blank" >
+      <img src="<%= @rf[i]["url_square"] %>" alt="<%= @rf[i]["keyword"] %>" /></a>
+      
     </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
-    <div class="picinner">
-		<a class="image-border" href="<%= randomflickr; @rf.page_url %>" target="_blank" >
-      <img src="<%= @rf.url_square %>" alt="flickr" /></a>
-    </div>
+    <% end %>
     
 </div>
+<% end %>
+
 <%= link_to "« ", '/items/fl', :id => "refresh-link", :class => "right_arrow", :remote => 'true' %>
 <% end %>
 </div>

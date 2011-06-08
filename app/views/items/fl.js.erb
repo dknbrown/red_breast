@@ -1,3 +1,8 @@
 	//alert("fl js");
 	$("#pictures").html("<%= escape_javascript(render('shared/flickr')) %>");
+	$(".thumb").hover(function() {
+		$(this).children('.alt').show();
+	},function(){
+		$(this).children('.alt').hide();
+		});
 	

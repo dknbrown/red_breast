@@ -181,8 +181,13 @@ width: 300px;
 .picupper{
 clear: both;
 }
-.piclower{
-clear: both;
+.alt {
+position: absolute;
+display:none;
+width: 75px;
+font-size: 80%;
+background-color:#ffffff;
+z-index: 100;
 }
 .picinner{
 float: left;

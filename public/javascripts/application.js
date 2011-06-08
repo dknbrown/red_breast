@@ -26,7 +26,11 @@ $(document).ready(function() {
 		event.preventDefault(); // Prevent link from following its href
 	});
   
-  
+	$(".thumb").hover(function() {
+		$(this).children('.alt').show();
+	},function(){
+		$(this).children('.alt').hide();
+		});
 	
     
 });

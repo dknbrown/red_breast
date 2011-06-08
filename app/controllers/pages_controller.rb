@@ -4,7 +4,7 @@ require 'open-uri'
 
 class PagesController < ApplicationController
   
-  EPISODE = 1
+  
   WEATHER_WO_ID = 864342
   def home
     @title = "Looking at stuff"
@@ -20,6 +20,7 @@ class PagesController < ApplicationController
 	unless SubjectKeyword.nil?
 		@curkeyword = SubjectKeyword.where("id = ?" , @yt_items.subject_keyword ).first
 	end
+	
 	
 
   end

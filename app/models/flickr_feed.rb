@@ -47,7 +47,37 @@ belongs_to :subject_keyword
 		end
 	end
 	
-	def self.random()
-		self.find(:first, :offset => rand(self.all.size-1))	
+	def self.imageGridArray(ep)
+		hshThumbs = Hash.new()
+		uniqueIds = []
+		randomImage = FlickrFeed.new()
+		keyWords = SubjectKeyword.where("ep = ?" ,  ep)
+		(1..12).each do |count|
+			
+			if uniqueIds.empty?
+					randomImage = self.randomByKeyword(keyWords.find(:first, :offset => rand(keyWords.all.size-1)).id)
+			else
+			
+			until !uniqueIds.include? randomImage.id
+				randomImage = self.randomByKeyword(keyWords.find(:first, :offset => rand(keyWords.all.size-1)).id)
+			end
+			
+			end
+			uniqueIds << randomImage.id
+			hshThumbs[count] = { "url_square" => randomImage.url_square,
+							  "url_med" => randomImage.url_med,
+							  "page_url" => randomImage.page_url,
+							  "keyword" => randomImage.subject_keyword.keyword }
+		end
+		return hshThumbs
 	end
+	
+	
+	def self.randomByKeyword(kw)
+		itemQ = self.where("subject_keyword_id = ?" ,  kw)
+		itemQ.find(:first, :offset => rand(itemQ.all.size-1))
+	end
+	
+
+	
 end

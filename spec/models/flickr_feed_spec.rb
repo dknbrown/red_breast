@@ -17,8 +17,12 @@ describe FlickrFeed do
     FlickrFeed.create!(@attr)
   end  
   
-  it "should respond to random" do 
-	FlickrFeed.should respond_to(:random)
+  it "should respond to randomByKeyword" do 
+	FlickrFeed.should respond_to(:randomByKeyword)
+  end
+  
+  it "should respond to imageGridArray" do 
+	FlickrFeed.should respond_to(:imageGridArray)
   end
   
   it "should respond to the subject_keyword relationship" do 
