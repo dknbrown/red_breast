@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110524191807) do
+ActiveRecord::Schema.define(:version => 20110610124650) do
+
+  create_table "amazon_feeds", :force => true do |t|
+    t.integer  "subject_keyword_id"
+    t.string   "title"
+    t.string   "image_url"
+    t.string   "page_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "price",              :precision => 8, :scale => 2
+  end
+
+  create_table "episodes", :force => true do |t|
+    t.string   "title"
+    t.string   "slogan"
+    t.string   "location"
+    t.string   "css"
+    t.string   "bg_img"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "flickr_feeds", :force => true do |t|
     t.string   "title"
@@ -43,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20110524191807) do
 
   create_table "subject_keywords", :force => true do |t|
     t.string   "keyword"
-    t.integer  "ep"
+    t.integer  "episode_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

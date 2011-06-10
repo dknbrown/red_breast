@@ -296,8 +296,7 @@ border-style:none;
 }
 .caption {
 background-color:#ffffff;
-
-
+opacity:0.86;
 }
 /* weather */
 .wlocal{}

@@ -51,7 +51,7 @@ belongs_to :subject_keyword
 		hshThumbs = Hash.new()
 		uniqueIds = []
 		randomImage = FlickrFeed.new()
-		keyWords = SubjectKeyword.where("ep = ?" ,  ep)
+		keyWords = SubjectKeyword.where("episode_id = ?" ,  ep)
 		(1..12).each do |count|
 			
 			if uniqueIds.empty?

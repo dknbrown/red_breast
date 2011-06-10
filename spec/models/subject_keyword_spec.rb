@@ -4,7 +4,7 @@ describe SubjectKeyword do
   before(:each) do
     @attr = {
 		:keyword => "test",
-		:ep => 1
+		:episode_id => 1
     }
     end
     
@@ -26,5 +26,9 @@ describe SubjectKeyword do
     
     it "should respond to the soundcloud_feed_entry relationship" do 
 	SubjectKeyword.first.should respond_to(:soundcloud_feed_entries)
+    end
+    
+    it "should respond to the soundcloud_feed_entry relationship" do 
+	SubjectKeyword.first.should respond_to(:episode)
     end
 end

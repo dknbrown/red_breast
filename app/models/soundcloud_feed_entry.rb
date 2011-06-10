@@ -1,4 +1,17 @@
 # == Schema Information
+# Schema version: 20110610122209
+#
+# Table name: soundcloud_feed_entries
+#
+#  id                 :integer         not null, primary key
+#  title              :string(255)
+#  sound_id           :string(255)
+#  subject_keyword_id :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
+# == Schema Information
 # Schema version: 20110524191807
 #
 # Table name: soundcloud_feed_entries

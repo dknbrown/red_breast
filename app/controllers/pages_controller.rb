@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     
     
 
-    #@rssfeed_items = RssFeedEntry.all(:limit => 1)
+    @rssfeed_items = RssFeedEntry.all(:limit => 1)
     
     @yt_items = YoutubeFeedEntry.random
     
