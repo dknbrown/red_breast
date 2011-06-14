@@ -23,9 +23,19 @@ belongs_to :subject_keyword
 		sc_consumer = Soundcloud.consumer("#{sccodes['key']}","#{sccodes['secret']}")
 		access_token = OAuth::AccessToken.new(sc_consumer,"#{sccodes['key']}","#{sccodes['secret']}")
 		sc_client = Soundcloud.register({:access_token => access_token})
-		my_user = sc_client.User.find_me
 		
-		p "Hello, my name is #{my_user.full_name}"
+		entries = sc_client.Track.find(:all,:params => {:order => 'hotness', :limit => 10})
+
+		entries.each do |entry|
+			unless exists? :sound_id => entry.id
+			create!(
+				:title => entry.title,
+				:sound_id => entry.id,
+				:subject_keyword_id => search_for_id
+			)
+			end
+		end
+
     end
     
     def self.random()
