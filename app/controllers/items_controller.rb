@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
 	end
 	
 	def fl
-		
+		@episode_label = params[:ep]
 		respond_to do |wants|
 			wants.html
 			wants.js

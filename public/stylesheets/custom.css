@@ -111,12 +111,14 @@ episode {
  padding: 5px;
 }
 weather {
- float: left;
+position: absolute;
+ left: 10px;
+ top: 10px;
  padding: 5px;
 }
 .wimage {
   float: left;
-  padding: 5px;
+  padding-right: 5px;
 }
 .round {
 	-moz-border-radius: 15px;
