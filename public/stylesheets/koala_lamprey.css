@@ -1,0 +1,14 @@
+round {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.content {
+-background-color:#89CFF0;
+background-color: #89CFF0;
+border-width:2px;
+border-color:#090909;
+
+
+border-width:1px;
+}

@@ -45,8 +45,11 @@ belongs_to :subject_keyword
     end
   end
 
-  def self.random()
-	self.find(:first, :offset => rand(self.all.size-1))	
+  def self.randByEp(ep)
+	
+	
+	allByKeyword = SubjectKeyword.rand_by_ep(ep).youtube_feed_entries
+	randEntry = allByKeyword.find(:first, :offset => rand(allByKeyword.all.size-1))
   end
   
   def self.randomizeSet(items)

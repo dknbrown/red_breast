@@ -15,6 +15,7 @@ describe SubjectKeyword do
     it "should respond find all records by ep" do
 		SubjectKeyword.should respond_to(:all_by_ep)
     end 
+
     
     it "should respond to the youtube_feed_entry relationship" do 
 	SubjectKeyword.first.should respond_to(:youtube_feed_entries)

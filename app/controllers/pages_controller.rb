@@ -8,13 +8,13 @@ class PagesController < ApplicationController
   WEATHER_WO_ID = 864342
   def home
     @title = "Looking at stuff"
+    @episode_label = EPISODE
     @episode = EPISODE
-    
     
 
     @rssfeed_items = RssFeedEntry.all(:limit => 1)
     
-    @yt_items = YoutubeFeedEntry.random
+    @yt_items = YoutubeFeedEntry.randByEp(@episode)
     
     @weather_items = update_weather( WEATHER_WO_ID )
     

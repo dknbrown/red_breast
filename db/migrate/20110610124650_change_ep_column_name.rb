@@ -4,5 +4,6 @@ class ChangeEpColumnName < ActiveRecord::Migration
   end
 
   def self.down
+	rename_column :subject_keywords, :episode_id, :ep
   end
 end

@@ -1,0 +1,2 @@
+class SubjectKeywordsController < ApplicationController
+end

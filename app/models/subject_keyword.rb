@@ -11,15 +11,20 @@
 #
 
 class SubjectKeyword < ActiveRecord::Base
-	attr_accessible :keyword, :ep
+	attr_accessible :keyword, :episode_id
 	belongs_to :episode
 	has_many :youtube_feed_entries
 	has_many :flickr_feeds
 	has_many :soundcloud_feed_entries
 		
 	def self.all_by_ep(ep_num)
-		keys = self.find(:all, :conditions => { :episode_id => ep_num })
+		Episode.find(ep_num).subject_keywords
 		
+	end
+	
+	def self.rand_by_ep(ep_num)
+		epKeywords = all_by_ep(ep_num)
+		randomKeyword = epKeywords.find(:first, :offset => rand(epKeywords.size-1))
 	end
 
 

@@ -1,20 +1,15 @@
 RedBreast::Application.routes.draw do
 
 
-  root :to => "pages#home"
-
-  match '/contact', :to => 'pages#contact'
-  match '/about',   :to => 'pages#about'
-  match '/help',    :to => 'pages#help'
   
   match '/items/yt', 	:to => 'items#yt'
   match '/items/fl', 	:to => 'items#fl'
   match '/items/tw', 	:to => 'items#tw'
   match '/items/sc', 	:to => 'items#sc'
   
-  resources :episodes do
-	resources :subject_keywords
-  end
+  resources :episodes 
+  
+  root :to => "episodes#index"
   
   #resource :youtube_feed_entry
   

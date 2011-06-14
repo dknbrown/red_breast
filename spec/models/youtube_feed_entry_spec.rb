@@ -18,9 +18,7 @@ describe YoutubeFeedEntry do
     YoutubeFeedEntry.create!(@attr)
   end  
   
-  it "should respond to random" do 
-	YoutubeFeedEntry.should respond_to(:random)
-  end
+
   
   it "should respond to the subject_keyword relationship" do 
 	YoutubeFeedEntry.first.should respond_to(:subject_keyword)
