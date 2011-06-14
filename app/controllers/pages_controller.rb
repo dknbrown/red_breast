@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def home
     @title = "Looking at stuff"
     @episode_label = EPISODE
-    @episode = EPISODE
+    #@episode = EPISODE
     
 
     @rssfeed_items = RssFeedEntry.all(:limit => 1)

@@ -1,5 +1,5 @@
 	//alert("fl js");
-	$("#pictures").html("<%= escape_javascript(render('shared/flickr')) %>");
+	$("#pictures").html("<%= escape_javascript(render :partial => 'shared/flickr' ) %>");
 	$(".thumb").hover(function() {
 		$(this).children('.alt').show();
 	},function(){

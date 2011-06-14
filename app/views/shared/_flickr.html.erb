@@ -1,5 +1,5 @@
 <div class="picwrapper">
-<% randomflickr; unless @rf.nil? %>
+<% 	@rf = FlickrFeed.imageGridArray(@episode||=2); unless @rf.nil? %>
 
 
 <div class="picupper">
