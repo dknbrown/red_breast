@@ -1,1 +1,1 @@
-A prcatice app
+This is a practice app. After finishing some rails tutorials and reading a book on ruby I wanted to dive right in and run into some real world problems.  This will eventually be a blog application that will query and cache information from popular APIs based on a set of tags for a blog entry.  This way API feeds will be more dynamic and relate specifically with the blog entry topic.
