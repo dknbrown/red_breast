@@ -18,6 +18,7 @@ describe SoundcloudFeedEntry do
   end
   
   it "should respond to the subject_keyword relationship" do 
+	SoundcloudFeedEntry.create!(@attr)
 	SoundcloudFeedEntry.first.should respond_to(:subject_keyword)
   end
 end

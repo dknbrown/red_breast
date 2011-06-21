@@ -1,6 +1,8 @@
 RedBreast::Application.routes.draw do
 
 
+  resources :users
+  match '/signup',  :to => 'users#new'
   
   match '/items/yt', 	:to => 'items#yt'
   match '/items/fl', 	:to => 'items#fl'
