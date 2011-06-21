@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110621135409) do
+ActiveRecord::Schema.define(:version => 20110621160515) do
 
   create_table "amazon_feeds", :force => true do |t|
     t.integer  "subject_keyword_id"
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(:version => 20110621135409) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
